@@ -74,6 +74,6 @@ public class BobRossTest {
         Set<String> paintingElements = bob.getPaintingElements();
 
         // then
-        assertThat(paintingElements).contains("mountain sky");
+        assertThat(paintingElements).contains("mountain");
     }
 }
