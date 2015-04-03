@@ -21,8 +21,8 @@ import com.google.common.collect.ImmutableSet;
  */
 public class BobRossTest {
 
-    private static final Set<String> ANY_PAINTING_ELEMENTS = ImmutableSet.of("sky", "mountain", "happy tree");
-    private static final Set<String> ANY_PAINTING_ELEMENTS_BUT_NO_HAPPY_TREE = ImmutableSet.of("sky", "mountain");
+    private static final Set<String> ANY_PAINTING_ELEMENTS = ImmutableSet.of("sky", "mountain", "happy tree", "sad tree", "good boy");
+    private static final Set<String> ANY_PAINTING_ELEMENTS_BUT_NO_HAPPY_TREE = ImmutableSet.of("sky", "mountain", "clouds", "sun");
 
     /**
      * Shows using mocks
@@ -52,14 +52,14 @@ public class BobRossTest {
         Set<String> paintingElements = example.getPaintingElements();
 
         // then
-        paintingElements.add("happy little accident");
+        paintingElements.add("happy little accident prone things");
     }
 
     @DataProvider
     public Object[][] paintingElementsWithoutHappyTreeData() {
         return new Object[][] {
-                { ImmutableSet.of("sky", "mountain", "cloud") },
-                { ImmutableSet.of("sky", "lake", "barn", "squirrel") } };
+                { ImmutableSet.of("sky", "mountain", "cloud", "red horse") },
+                { ImmutableSet.of("sky", "lake", "barn", "squirrel", "dog", "cat", "bad boys", "happy tree") } };
     }
 
     /**
@@ -74,6 +74,6 @@ public class BobRossTest {
         Set<String> paintingElements = bob.getPaintingElements();
 
         // then
-        assertThat(paintingElements).contains("happy tree");
+        assertThat(paintingElements).contains("sad tree");
     }
 }
