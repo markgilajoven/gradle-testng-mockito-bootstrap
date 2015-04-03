@@ -31,8 +31,6 @@ public class BobRoss {
         }
         this.paintingElements = builder.build();
         this.printStream = printStream;
-	// New bad boy
-	this.paintingElements = printStream;
     }
 
     public Set<String> getPaintingElements() {
@@ -46,7 +44,7 @@ public class BobRoss {
     }
 
     public static void main(String[] args) {
-        Set<String> paintingElements = ImmutableSet.of("sky", "lake", "mountain", "happy tree", "little squirrel");
+        Set<String> paintingElements = ImmutableSet.of("sky", "lake", "mountain", "sad tree", "little squirrel");
         BobRoss bob = new BobRoss(paintingElements);
         bob.paintPicture();
     }
