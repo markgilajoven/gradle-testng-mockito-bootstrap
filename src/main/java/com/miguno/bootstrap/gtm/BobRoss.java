@@ -31,6 +31,8 @@ public class BobRoss {
         }
         this.paintingElements = builder.build();
         this.printStream = printStream;
+	// New bad boy
+	this.paintingElements = printStream;
     }
 
     public Set<String> getPaintingElements() {
