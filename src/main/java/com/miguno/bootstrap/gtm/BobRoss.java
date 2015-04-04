@@ -43,7 +43,7 @@ public class BobRoss {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main() {
         Set<String> paintingElements = ImmutableSet.of("sky", "lake", "mountain", "sad tree", "little squirrel");
         BobRoss bob = new BobRoss(paintingElements);
         bob.paintPicture();
